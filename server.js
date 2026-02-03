@@ -8,10 +8,11 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // Sunucuyu başlat
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 ParkShare API ${PORT} portunda çalışıyor`);
     console.log(`📍 Environment: ${process.env.NODE_ENV}`);
     console.log(`🗄️  MongoDB: ${process.env.MONGODB_URI}`);
+    console.log(`📱 Cihazınızdan erişim: http://192.168.1.191:${PORT}`);
 });
 
 // Hata yönetimi
